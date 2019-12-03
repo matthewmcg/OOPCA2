@@ -1,0 +1,34 @@
+﻿<Window x:Class="CA2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CA2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500.576" Width="863.963" Loaded="Window_Loaded">
+    <Grid x:Name="Activity_Planner" Margin="0,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="168*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="583*"/>
+        </Grid.ColumnDefinitions>
+        <RadioButton x:Name="rbAll" Content="All" HorizontalAlignment="Left" Margin="26,143,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.277,2.574" Grid.ColumnSpan="2" Click="RbAll_Click"/>
+        <RadioButton x:Name="rbLand" Content="Land" HorizontalAlignment="Left" Margin="25,186,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Click="RbAll_Click"/>
+        <RadioButton x:Name="rbWater" Content="Water" HorizontalAlignment="Left" Margin="25,230,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Click="RbAll_Click"/>
+        <RadioButton x:Name="rbAir" Content="Air" HorizontalAlignment="Left" Margin="25,274,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Click="RbAll_Click" Width="41"/>
+        <Button x:Name="Add" Content="Add &gt;&gt;" HorizontalAlignment="Left" Margin="98,160,0,0" VerticalAlignment="Top" Width="75" Grid.Column="4" Click="Add_Click" Height="25" IsCancel="True"/>
+        <Button x:Name="Remove" Content="&lt;&lt; Remove" HorizontalAlignment="Left" Margin="98,274,0,0" VerticalAlignment="Top" Width="75" Grid.Column="4" Click="Remove_Click" Height="27" IsCancel="True"/>
+        <Label Content="All Activities" HorizontalAlignment="Left" Margin="21,117,0,0" VerticalAlignment="Top" Width="82" Grid.Column="2"/>
+        <Label Content="Selected Activities" HorizontalAlignment="Left" Margin="238,117,0,0" VerticalAlignment="Top" Width="108" Grid.Column="4"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="31.784,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="24" Foreground="#FF00030C" Grid.ColumnSpan="3" Grid.Column="2"><Span Foreground="#FF00B0F0"><Run Text="Activity Planner"/></Span></TextBlock>
+        <ListBox x:Name="lbxAllactivities" HorizontalAlignment="Left" Height="192" Margin="21,143,0,0" VerticalAlignment="Top" Width="220" Grid.ColumnSpan="3" Grid.Column="2" SelectionChanged="ListBox_SelectionChanged"/>
+        <ListBox x:Name="lbxCart" HorizontalAlignment="Left" Height="192" Margin="238,143,0,0" VerticalAlignment="Top" Width="220" Grid.Column="4" SelectionChanged="LbxCart_SelectionChanged"/>
+        <Label x:Name="deschead" Content="Description:" Grid.Column="2" HorizontalAlignment="Left" Margin="21,348,0,0" VerticalAlignment="Top" Width="82" Height="28"/>
+        <Label x:Name="total" Content="TotalCost:" Grid.Column="4" HorizontalAlignment="Left" Height="28" Margin="238,348,0,0" VerticalAlignment="Top" Width="65"/>
+        <TextBox x:Name="tbxDescription" Grid.ColumnSpan="3" Grid.Column="2" HorizontalAlignment="Left" Height="65" Margin="21,381,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" SpellCheck.IsEnabled="True"/>
+        <TextBox x:Name="txtTotal" Grid.Column="4" HorizontalAlignment="Left" Height="28" Margin="308,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" SpellCheck.IsEnabled="True"/>
+
+    </Grid>
+</Window>
